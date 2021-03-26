@@ -14,7 +14,8 @@ public class LoanPayment {
 		
 		System.out.println(month);
 		sc.close();
-					
+
 	}
 
 }
+// 1+4+1+5+1+6

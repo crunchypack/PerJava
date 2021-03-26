@@ -1,15 +1,30 @@
-package com.perscholas.java_loop;
+	package com.perscholas.java_loop;
+
+import lecture.Student;
 
 public class DailyTasks {
 
 	public static void main(String[] args) {
-		taskNine();
-
+		Student natalie = new Student(1,"Natalie","Davidsson","Hello@bye.com","555-891-2732");
+		System.out.print(divisor_sum(6));
 	}
+	public static int divisor_sum(int n){
+        int sum = 0; 
+        for(int i = 1; i < n; i++ ){
+            if(n%i == 0){
+                sum += i;
+            }
+        }
+        return sum;
+    }
 	public static void taskOne() {
+		
 		for(int i = 1; i <= 10; i++) {
 			System.out.println(i);
 		}
+		
+		
+		
 	}
 	public static void taskTwo() {
 		for(int i = 0; i<=100; i+=10) {
