@@ -7,7 +7,7 @@ public class MainEntry {
 	
 	
 	public static void main(String[] args) {
-		// Implementations of Calc as inline code
+		// Implementations of Calc
 		Calc add = new Calc(){ // Add function
 			/**
 			  * Adds the values in the array of Integers
