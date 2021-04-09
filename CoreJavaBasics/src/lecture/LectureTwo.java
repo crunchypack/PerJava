@@ -1,12 +1,22 @@
 package lecture;
 
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Scanner;
 
 public class LectureTwo {
 
 	public static void main(String[] args) {
-		chineseZodiac();
+		
+
+		         Integer arr[] = {1,3,5,7,9,2,4,6,8};
+
+		         Arrays.stream(arr).skip(2).sorted().skip(3)
+
+		          .forEach(x -> System.out.println(x));
+
+
+		
 		
 	}
 	public static void hexToDec() {
