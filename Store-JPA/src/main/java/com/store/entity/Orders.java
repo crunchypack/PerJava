@@ -18,7 +18,7 @@ public class Orders {
 	@Id
 	private Integer id;
 	
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date date;
 	
 	private Double totRev;

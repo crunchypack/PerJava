@@ -15,7 +15,18 @@ public class Store {
 		int choice = 0;
 		do {
 			menu();
-			choice = sc.nextInt();
+			while(true) {
+				try {
+					choice = sc.nextInt();
+					break;
+				}catch(Exception e) {
+					System.out.println("Please use a real number!");
+					sc.nextLine();
+					menu();
+				}
+			}
+			
+			
 			sc.nextLine();
 			switch(choice) {
 			case 1:
