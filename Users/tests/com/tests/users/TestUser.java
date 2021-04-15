@@ -10,6 +10,7 @@ import com.users.services.ManageUsers;
 
 class TestUser {
 	private static ManageUsers mu;
+	
 	@BeforeAll
 	public static void setUp() {
 		mu = new ManageUsers();

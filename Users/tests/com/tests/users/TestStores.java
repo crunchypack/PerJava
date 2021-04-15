@@ -13,11 +13,16 @@ import org.junit.jupiter.params.provider.ValueSource;
 import com.users.entity.Stores;
 import com.users.services.ManageStores;
 
+
+
+
 class TestStores {
 	private static ManageStores mu;
+	static int id;
 	@BeforeAll
 	static void setUp()  {
 		mu  =new ManageStores();
+		id = mu.getRows()+1;
 	}
 
 	@ParameterizedTest
@@ -32,7 +37,7 @@ class TestStores {
 	}
 	@Test
 	void testAdd() {
-		int id = mu.getRows()+1;
+		
 		Stores expected = new Stores(id, "TestStore", "Sun City","XX");
 		
 		mu.addStore(id, "TestStore", "Sun City","XX");
@@ -45,6 +50,7 @@ class TestStores {
 	@AfterAll
 	static void closeDown() {
 		System.out.println("AfterAll cleanup running!");
+		mu.deleteById(id); 
 		mu.endAll();
 	}
 

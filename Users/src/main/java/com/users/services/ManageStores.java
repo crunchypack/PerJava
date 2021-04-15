@@ -43,6 +43,30 @@ public class ManageStores {
 		rows = manager.createNamedQuery("getAllStores").getResultList().size();
 		return rows;
 	}
+	public void deleteById(int id) {
+		Stores store = manager.find(Stores.class, id);
+		try {
+			manager.getTransaction().begin();
+			manager.remove(store);
+			manager.getTransaction().commit();
+		}catch(Exception e) {
+			manager.getTransaction().rollback();
+			e.printStackTrace();
+		}
+	}
+	public void updateById(int id, Stores s) {
+		Stores store = manager.find(Stores.class, id);
+		try {
+			manager.getTransaction().begin();
+			store.setName(s.getName());
+			store.setCity(s.getCity());
+			store.setState(s.getState());
+			manager.getTransaction().commit();
+		}catch(Exception e) {
+			manager.getTransaction().rollback();
+			e.printStackTrace();
+		}
+	}
 
 	
 	public void endAll() {
